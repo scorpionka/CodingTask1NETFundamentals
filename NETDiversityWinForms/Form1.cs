@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ClassLibraryHelloUser;
+using System;
 using System.Windows.Forms;
 
 namespace NETDiversityWinForms
@@ -20,7 +14,8 @@ namespace NETDiversityWinForms
         private void btnEnterUserName_Click(object sender, EventArgs e)
         {
             string userName = txtBox.Text;
-            lblHelloUserName.Text = $"Hello {userName}";
+            HelloUser helloUser = new HelloUser(userName);
+            lblHelloUserName.Text = helloUser.Greetings;
         }
     }
 }

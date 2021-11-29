@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibraryHelloUser;
+using System;
 
 namespace NETDiversityConsoleApplication
 {
@@ -9,7 +10,8 @@ namespace NETDiversityConsoleApplication
             Console.WriteLine("What's your name?");
             string userName;
             userName = Console.ReadLine();
-            Console.WriteLine($"Hello {userName}");
+            HelloUser helloUser = new HelloUser(userName);
+            Console.WriteLine(helloUser.Greetings);
         }
     }
 }

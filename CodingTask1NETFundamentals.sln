@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NETDiversityConsoleApplicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NETDiversityWinForms", "NETDiversityWinForms\NETDiversityWinForms.csproj", "{213F43A2-F8A8-4CA4-A611-216454A5D48A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryHelloUser", "ClassLibraryHelloUser\ClassLibraryHelloUser.csproj", "{80E2BC1C-2A0D-4BA1-84EC-EE4B5A215019}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{213F43A2-F8A8-4CA4-A611-216454A5D48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{213F43A2-F8A8-4CA4-A611-216454A5D48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{213F43A2-F8A8-4CA4-A611-216454A5D48A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80E2BC1C-2A0D-4BA1-84EC-EE4B5A215019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80E2BC1C-2A0D-4BA1-84EC-EE4B5A215019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80E2BC1C-2A0D-4BA1-84EC-EE4B5A215019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80E2BC1C-2A0D-4BA1-84EC-EE4B5A215019}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
