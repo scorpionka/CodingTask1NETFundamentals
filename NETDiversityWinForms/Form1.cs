@@ -16,5 +16,11 @@ namespace NETDiversityWinForms
         {
             InitializeComponent();
         }
+
+        private void btnEnterUserName_Click(object sender, EventArgs e)
+        {
+            string userName = txtBox.Text;
+            lblHelloUserName.Text = $"Hello {userName}";
+        }
     }
 }
