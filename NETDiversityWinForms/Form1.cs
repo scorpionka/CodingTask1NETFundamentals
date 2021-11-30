@@ -11,10 +11,11 @@ namespace NETDiversityWinForms
             InitializeComponent();
         }
 
-        private void btnEnterUserName_Click(object sender, EventArgs e)
+        private void BtnEnterUserName_Click(object sender, EventArgs e)
         {
-            string userName = txtBox.Text;
-            HelloUser helloUser = new HelloUser(userName);
+            string userName = txtBoxUserName.Text;
+            string userEmail = txtBoxUserEmail.Text;
+            HelloUser helloUser = new HelloUser(userName, userEmail);
             lblHelloUserName.Text = helloUser.Greetings;
         }
     }

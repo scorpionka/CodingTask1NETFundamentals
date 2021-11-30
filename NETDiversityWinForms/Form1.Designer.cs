@@ -29,44 +29,54 @@ namespace NETDiversityWinForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtBox = new System.Windows.Forms.TextBox();
-            this.btnEnterUserName = new System.Windows.Forms.Button();
+            this.txtBoxUserName = new System.Windows.Forms.TextBox();
+            this.btnEnterUserNameAndEmail = new System.Windows.Forms.Button();
             this.lblHelloUserName = new System.Windows.Forms.Label();
+            this.txtBoxUserEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // txtBox
+            // txtBoxUserName
             // 
-            this.txtBox.Location = new System.Drawing.Point(257, 107);
-            this.txtBox.Name = "txtBox";
-            this.txtBox.Size = new System.Drawing.Size(176, 20);
-            this.txtBox.TabIndex = 0;
+            this.txtBoxUserName.Location = new System.Drawing.Point(257, 107);
+            this.txtBoxUserName.Name = "txtBoxUserName";
+            this.txtBoxUserName.Size = new System.Drawing.Size(176, 20);
+            this.txtBoxUserName.TabIndex = 0;
             // 
-            // btnEnterUserName
+            // btnEnterUserNameAndEmail
             // 
-            this.btnEnterUserName.Location = new System.Drawing.Point(458, 104);
-            this.btnEnterUserName.Name = "btnEnterUserName";
-            this.btnEnterUserName.Size = new System.Drawing.Size(126, 23);
-            this.btnEnterUserName.TabIndex = 1;
-            this.btnEnterUserName.Text = "Enter user name";
-            this.btnEnterUserName.UseVisualStyleBackColor = true;
-            this.btnEnterUserName.Click += new System.EventHandler(this.btnEnterUserName_Click);
+            this.btnEnterUserNameAndEmail.Location = new System.Drawing.Point(257, 159);
+            this.btnEnterUserNameAndEmail.Name = "btnEnterUserNameAndEmail";
+            this.btnEnterUserNameAndEmail.Size = new System.Drawing.Size(176, 23);
+            this.btnEnterUserNameAndEmail.TabIndex = 1;
+            this.btnEnterUserNameAndEmail.Text = "Enter user name and email";
+            this.btnEnterUserNameAndEmail.UseVisualStyleBackColor = true;
+            this.btnEnterUserNameAndEmail.Click += new System.EventHandler(this.BtnEnterUserName_Click);
             // 
             // lblHelloUserName
             // 
             this.lblHelloUserName.AutoSize = true;
-            this.lblHelloUserName.Location = new System.Drawing.Point(354, 213);
+            this.lblHelloUserName.Location = new System.Drawing.Point(254, 250);
             this.lblHelloUserName.Name = "lblHelloUserName";
-            this.lblHelloUserName.Size = new System.Drawing.Size(0, 13);
+            this.lblHelloUserName.Size = new System.Drawing.Size(52, 13);
             this.lblHelloUserName.TabIndex = 2;
+            this.lblHelloUserName.Text = "Waiting...";
+            // 
+            // txtBoxUserEmail
+            // 
+            this.txtBoxUserEmail.Location = new System.Drawing.Point(257, 133);
+            this.txtBoxUserEmail.Name = "txtBoxUserEmail";
+            this.txtBoxUserEmail.Size = new System.Drawing.Size(176, 20);
+            this.txtBoxUserEmail.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBoxUserEmail);
             this.Controls.Add(this.lblHelloUserName);
-            this.Controls.Add(this.btnEnterUserName);
-            this.Controls.Add(this.txtBox);
+            this.Controls.Add(this.btnEnterUserNameAndEmail);
+            this.Controls.Add(this.txtBoxUserName);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -76,9 +86,10 @@ namespace NETDiversityWinForms
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtBox;
-        private System.Windows.Forms.Button btnEnterUserName;
+        private System.Windows.Forms.TextBox txtBoxUserName;
+        private System.Windows.Forms.Button btnEnterUserNameAndEmail;
         private System.Windows.Forms.Label lblHelloUserName;
+        private System.Windows.Forms.TextBox txtBoxUserEmail;
     }
 }
 
