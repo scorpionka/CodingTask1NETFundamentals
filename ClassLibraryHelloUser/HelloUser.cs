@@ -3,15 +3,19 @@ using System.Linq;
 
 namespace ClassLibraryHelloUser
 {
-    public class HelloUser
+    public class HelloUser : IHelloUser
     {
-        private readonly string userName;
-        private readonly string userEmail;
-        private readonly string validationMessage;
+        private string userName;
+        private string userEmail;
+        private string validationMessage;
+
+        public HelloUser()
+        {
+        }
 
         public HelloUser(string userName, string userEmail)
         {
-            validationMessage = Validator.ValidateData(userName, userEmail);
+            this.validationMessage = Validator.ValidateData(userName, userEmail);
 
             if (string.IsNullOrEmpty(validationMessage))
             {
@@ -23,6 +27,19 @@ namespace ClassLibraryHelloUser
         }
 
         public string Greetings => string.IsNullOrEmpty(validationMessage) ? $"{DateTime.Now:HH:mm.ss} Hello {this.userName}, {this.userEmail}!" : validationMessage;
+
+        public void Init(string userName, string userEmail)
+        {
+            this.validationMessage = Validator.ValidateData(userName, userEmail);
+
+            if (string.IsNullOrEmpty(validationMessage))
+            {
+                userName = FormatName(userName);
+            }
+
+            this.userName = userName;
+            this.userEmail = userEmail;
+        }
 
         private static string FormatName(string userName)
         {

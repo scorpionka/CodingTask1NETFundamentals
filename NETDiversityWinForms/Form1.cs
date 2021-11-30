@@ -6,8 +6,11 @@ namespace NETDiversityWinForms
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private readonly IHelloUser helloUser;
+
+        public Form1(IHelloUser helloUser)
         {
+            this.helloUser = helloUser;
             InitializeComponent();
         }
 
@@ -15,7 +18,7 @@ namespace NETDiversityWinForms
         {
             string userName = txtBoxUserName.Text;
             string userEmail = txtBoxUserEmail.Text;
-            HelloUser helloUser = new HelloUser(userName, userEmail);
+            this.helloUser.Init(userName, userEmail);
             lblHelloUserName.Text = helloUser.Greetings;
         }
     }
